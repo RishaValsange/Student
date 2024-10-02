@@ -27,7 +27,7 @@ public class StudentController {
     @PostMapping("/student")
     public String submit(@ModelAttribute Student student) {
         studentRepository.save(student);
-        return "redirect:/list"; // Redirect to the student list after saving
+        return "addStudent"; // Redirect to the student list after saving
     }
 
     @GetMapping("/list")
